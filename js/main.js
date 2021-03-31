@@ -14,9 +14,9 @@ function setup() {
 
     ground = new Ground(width/2, height-10, width, 20);
     box = new Box(450, 300, 50, 50);
-    player = new Player(100, 300, 15);
+    player = new Player(125, 300, 15);
 
-    slingshot = new SlingShot(100, 300, player.body);
+    slingshot = new SlingShot(125, 300, player.body);
 
     const mouse = Matter.Mouse.create(canvas.elt);
     gamepad = MyGamepadLib().getGamepad;
@@ -28,6 +28,11 @@ function setup() {
 
     mConstraint = Matter.MouseConstraint.create(engine, options);
     Matter.World.add(world, mConstraint);
+}
+function keyPressed() {
+    if(key == ' ') {
+        slingshot.attach(player.body)
+    }
 }
 function mouseReleased() {
     setTimeout(() => {

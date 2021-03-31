@@ -26,4 +26,7 @@ class SlingShot {
             line(posA.x, posA.y, posB.x, posB.y);
         }
     }
+    attach(body) {
+        this.sling.bodyB = body;
+    }
 }
