@@ -19,7 +19,7 @@ function setup() {
     slingshot = new SlingShot(50, 300, player.body);
 
     const mouse = Matter.Mouse.create(canvas.elt);
-    gamepad = MyGamepadLib().getGamepad[0].buttons.values();
+    gamepad = MyGamepadLib().getGamepad
 
     const options = {
         mouse: mouse,
@@ -36,9 +36,10 @@ function mouseReleased() {
 }
 let firstTick = true;
 function draw() {
+    console.log(MyGamepadLib().getGamepad[0]);
     if(firstTick == true) {
         firstTick = false;
-        MyGamepadLib().startGamepad
+        //MyGamepadLib().startGamepad;
     }
     
     background(0);
