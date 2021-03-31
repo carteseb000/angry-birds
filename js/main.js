@@ -14,9 +14,9 @@ function setup() {
 
     ground = new Ground(width/2, height-10, width, 20);
     box = new Box(450, 300, 50, 50);
-    player = new Player(125, 300, 15);
+    player = new Player(150, 300, 15);
 
-    slingshot = new SlingShot(125, 300, player.body);
+    slingshot = new SlingShot(150, 300, player.body);
 
     const mouse = Matter.Mouse.create(canvas.elt);
     gamepad = MyGamepadLib().getGamepad;
@@ -31,6 +31,8 @@ function setup() {
 }
 function keyPressed() {
     if(key == ' ') {
+        Matter.World.remove(world, player.body);
+        player = new Player(150, 300, 15);
         slingshot.attach(player.body)
     }
 }
