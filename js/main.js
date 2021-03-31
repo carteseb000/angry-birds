@@ -5,6 +5,8 @@ let player, mConstraint;
 let slingshot;
 let box, ground;
 
+let gamepad;
+
 function setup() {
     canvas = createCanvas(600, 400);
     engine = Matter.Engine.create();
@@ -17,6 +19,7 @@ function setup() {
     slingshot = new SlingShot(50, 300, player.body);
 
     const mouse = Matter.Mouse.create(canvas.elt);
+    gamepad = MyGamepadLib()
 
     const options = {
         mouse: mouse,
