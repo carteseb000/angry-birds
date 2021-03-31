@@ -36,7 +36,7 @@ function mouseReleased() {
 }
 let firstTick = true;
 function draw() {
-    console.log(MyGamepadLib().getGamepad[0]);
+    // console.log(MyGamepadLib().getGamepad[0]);
     if(firstTick == true) {
         firstTick = false;
         //MyGamepadLib().startGamepad;
