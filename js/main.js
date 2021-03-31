@@ -14,9 +14,9 @@ function setup() {
 
     ground = new Ground(width/2, height-10, width, 20);
     box = new Box(450, 300, 50, 50);
-    player = new Player(50, 300, 15);
+    player = new Player(100, 300, 15);
 
-    slingshot = new SlingShot(50, 300, player.body);
+    slingshot = new SlingShot(100, 300, player.body);
 
     const mouse = Matter.Mouse.create(canvas.elt);
     gamepad = MyGamepadLib().getGamepad;
