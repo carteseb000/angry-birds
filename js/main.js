@@ -19,7 +19,7 @@ function setup() {
     slingshot = new SlingShot(50, 300, player.body);
 
     const mouse = Matter.Mouse.create(canvas.elt);
-    gamepad = MyGamepadLib()
+    gamepad = MyGamepadLib().getGamepad[0].buttons.values();
 
     const options = {
         mouse: mouse,
