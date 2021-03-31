@@ -8,7 +8,7 @@ let box, ground;
 let gamepad;
 
 function setup() {
-    canvas = createCanvas(600, 400);
+    canvas = createCanvas(1280, 750);
     engine = Matter.Engine.create();
     world = engine.world;
 
